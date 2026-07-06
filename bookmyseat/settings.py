@@ -126,6 +126,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -135,5 +136,6 @@ DATABASES = {
         default=os.environ.get(
             "DATABASE_URL",
             f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+        )
     )
 }
